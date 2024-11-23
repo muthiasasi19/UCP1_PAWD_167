@@ -10,3 +10,5 @@ Hapus
 
 ![image](https://github.com/user-attachments/assets/332bbf53-12a6-49b2-b32f-e7341962423a)
 
+Databse setelah hapus
+![image](https://github.com/user-attachments/assets/8e233ef6-ccf9-4d27-87bf-a60700c3aeb2)
