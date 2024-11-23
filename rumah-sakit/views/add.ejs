@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Dokter - Rumah Sakit</title>
+    <link rel="stylesheet" href="/rumah-sakit/public/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Tambah Dokter Baru</h1>
+    </header>
+
+    <div class="container">
+        <form action="/add" method="POST">
+            <table>
+                <tr>
+                    <td><label for="nama">Nama Dokter:</label></td>
+                    <td><input type="text" id="nama" name="nama" required></td>
+                </tr>
+                <tr>
+                    <td><label for="spesialisasi">Spesialisasi:</label></td>
+                    <td><input type="text" id="spesialisasi" name="spesialisasi" required></td>
+                </tr>
+                <tr>
+                    <td><label for="jadwal">Jadwal:</label></td>
+                    <input type="text" id="jadwal" name="jadwal" value="<%= dokter.jadwal %>" required placeholder="Contoh: Senin, 09:00 - 12:00"><br><br>
+                  </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <button type="submit" class="button">Simpan</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

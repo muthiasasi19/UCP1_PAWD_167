@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Menghubungkan dengan file CSS -->
+    <link rel="stylesheet" href="/rumah-sakit/public/css/style.css">
+</head>
+<body>
+    <header>
+        Edit Dokter
+    </header>
+    <div class="container">
+        <h1>Edit Data Dokter</h1>
+        
+        <!-- Menggunakan tabel untuk form edit -->
+        <form action="/edit/<%= dokter.id %>" method="POST">
+            <table class="form-table">
+                <tr>
+                    <td><label for="nama">Nama:</label></td>
+                    <td><input type="text" id="nama" name="nama" value="<%= dokter.nama %>" required></td>
+                </tr>
+                <tr>
+                    <td><label for="spesialisasi">Spesialisasi:</label></td>
+                    <td><input type="text" id="spesialisasi" name="spesialisasi" value="<%= dokter.spesialisasi %>" required></td>
+                </tr>
+                <tr>
+                    <td><label for="jadwal">Jadwal:</label></td>
+                    <td><input type="text" id="jadwal" name="jadwal" value="<%= dokter.jadwal %>" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="center">
+                        <button type="submit" class="button">Update</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        
+        <!-- Link kembali ke daftar dokter -->
+        <div class="back-link">
+            <a href="/" class="button">Kembali ke Daftar Dokter</a>
+        </div>
+    </div>
+</body>
+</html>

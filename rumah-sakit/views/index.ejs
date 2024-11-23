@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Dokter - Rumah Sakit</title>
+    <link rel="stylesheet" href="/rumah-sakit/public/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Data Dokter Rumah Sakit</h1>
+    </header>
+
+    <div class="container">
+        <a href="/add"><button>Tambah Dokter</button></a>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nama</th>
+                    <th>Spesialisasi</th>
+                    <th>Jadwal</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% dokter.forEach(function(doc) { %>
+                    <tr>
+                        <td><%= doc.id %></td>
+                        <td><%= doc.nama %></td>
+                        <td><%= doc.spesialisasi %></td>
+                        <td><%= doc.jadwal %></td>
+                        <td>
+                            <a href="/edit/<%= doc.id %>"><button>Edit</button></a>
+                            <a href="/delete/<%= doc.id %>"><button>Hapus</button></a>
+                        </td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
